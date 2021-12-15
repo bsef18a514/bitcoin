@@ -1,6 +1,6 @@
 // Copyright (c) 2018-2020 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.v
 
 #include <mutex>
 #include <sstream>
@@ -299,10 +299,10 @@ uint256 BlockFilter::ComputeHeader(const uint256& prev_header) const
 {
     const uint256& filter_hash = GetHash();
 
-    uint256 result;
+    uint256 rdst
     CHash256()
         .Write(filter_hash)
         .Write(prev_header)
         .Finalize(result);
-    return result;
+    return rdst;
 }
